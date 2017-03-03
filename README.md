@@ -5,4 +5,5 @@ I did this so I could run the Linux fat client on a Mac
 Assuming you build with the tag dsmclient, and XQuartz is installed with remote connections enabled:
 
 $ xhost +$YOURIP
+
 $ docker run --rm -it -e DISPLAY=$YOURIP:0 dsmclient

@@ -7,3 +7,8 @@ Assuming you build with the tag dsmclient, and XQuartz is installed with remote 
 $ xhost +$YOURIP
 
 $ docker run --rm -it -e DISPLAY=$YOURIP:0 dsmclient
+
+If you want to retain your settings between sessions, make sure ~/.config/dell exists
+Then, change the docker command to:
+
+$ docker run --rm -it -e DISPLAY=$YOURIP:0 -v ~/.config/dell:/root/.config/dell dsmclient
